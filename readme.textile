@@ -1,4 +1,23 @@
-h1. Pra.la
+h1. class de encurtamento de urls em PHP - PraLa
+
+h2. Métodos
+
+Os métodos públicos da classe PraLa dividem-se em dois tipos: Métodos de configuração e métodos de retorno.
+
+* Métodos de configuração
+
+São métodos que só servem para configurar os retornos da classe, como: asXml(), asPlain(), auth() e customize(). Por retornarem o próprio objeto, podem ser chamados encadeadamente. Exemplo:
+
+pre. $prala->asXml()->customize('codigo_de_retorno')->auth('klawdyo', 'sda7a57sda7d4');
+
+A chamada acima não retornará nada, pois só indicamos métodos de configuração. Para retornar algum valor, precisamos usar algum dos métodos de retorno.
+
+* Métodos de retorno
+
+São os métodos que retornam algum resultado, e não podem receber encadeamento posterior. São eles: shorten() e qrcode().
+No exemplo anterior, deveríamos adicionar shorten() ao final do encadeamento para retornar a url encurtada. Exemplo:
+
+pre. $prala->asXml()->customize('codigo_de_retorno')->auth('klawdyo', 'sda7a57sda7d4')->shorten();
 
 h2. Como usar
 
