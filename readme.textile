@@ -2,7 +2,7 @@ h1. PraLa - Classe de encurtamento de urls em PHP
 
 h2. Como usar
 
-h3. Carregando o objeto
+h3. Incluindo o arquivo para uso
 
 pre.    require 'Pra.la.php';
     
