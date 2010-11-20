@@ -1,31 +1,33 @@
-<?php
-    #
-    require 'Pra.la.php';
+h1. Pra.la
+
+h2. Como usar
+
+h3. Carregando o objeto
+pre.    require 'Pra.la.php';
     
-    #Iniciando o objeto. Necessário para todos os exemplos abaixo.
-    $prala = new PraLa('http://inscrever-se.net/semanadelinguas');
+h3. Iniciando o objeto. Necessário para todos os exemplos abaixo.
+pre.    $prala = new PraLa('http://inscrever-se.net/semanadelinguas');
     
-    #Exemplo Simples - Encurtando a Url
-    //echo $prala->shorten();
+h3. Exemplo Simples - Encurtando a Url
+
+pre. echo $prala->shorten();
     
-    #Exemplo com configuração do retorno como texto plano
-    //echo $prala->asPlain()->shorten();
+h3. Exemplo com configuração do retorno como texto plano
+
+pre. echo $prala->asPlain()->shorten();
                
-    #Exemplo com configuração do retorno como xml
-    //print_r( $prala->asXml()->shorten());
-    /*Esse exemplo com XML retornará
-    <?xml version="1.0" encoding="UTF-8" ?>
-    <prala>
-        <original>http://www.THE_URL.com.br/</original> 
-        <shortened>http://pra.la/00017</shortened> 
-        <short>00017</short>
-    </prala>/**/
+h3. Exemplo com configuração do retorno como xml
+
+pre. print_r( $prala->asXml()->shorten());
     
-    #Exemplo com customização da URL gerada
-    //echo $prala->customize('semanadelinguas')->shorten();     //Retornará http://pra.la/iPad2011
+h3. Exemplo com customização da URL gerada
+
+pre. echo $prala->customize('semanadelinguas')->shorten();     //Retornará http://pra.la/iPad2011
     
-    #Exemplo com Autenticação
-    //echo $prala->auth('apelido', 'chave_secreta')->shorten();
+h3. Exemplo com Autenticação
+
+pre. echo $prala->auth('apelido', 'chave_secreta')->shorten();
     
-    #Gerando uma imagem com um Qrcode a partir da url encurtada.
-    echo '<img src="' . $prala->qrcode(200) . '" />';
+h3. Gerando uma imagem com um Qrcode a partir da url encurtada.
+
+pre. echo '<img src="' . $prala->qrcode(200) . '" />';
