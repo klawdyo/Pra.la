@@ -3,10 +3,12 @@ h1. Pra.la
 h2. Como usar
 
 h3. Carregando o objeto
+
 pre.    require 'Pra.la.php';
     
 h3. Iniciando o objeto. Necessário para todos os exemplos abaixo.
-pre.    $prala = new PraLa('http://inscrever-se.net/semanadelinguas');
+
+pre.    $prala = new PraLa('http://google.com');
     
 h3. Exemplo Simples - Encurtando a Url
 
@@ -22,7 +24,7 @@ pre. print_r( $prala->asXml()->shorten());
     
 h3. Exemplo com customização da URL gerada
 
-pre. echo $prala->customize('semanadelinguas')->shorten();     //Retornará http://pra.la/iPad2011
+pre. echo $prala->customize('google')->shorten();     //Retornará http://pra.la/google
     
 h3. Exemplo com Autenticação
 
@@ -30,4 +32,4 @@ pre. echo $prala->auth('apelido', 'chave_secreta')->shorten();
     
 h3. Gerando uma imagem com um Qrcode a partir da url encurtada.
 
-pre. echo '<img src="' . $prala->qrcode(200) . '" />';
+pre. echo '<img src="' . $prala->qrcode() . '" />';
