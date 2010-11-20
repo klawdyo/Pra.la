@@ -3,7 +3,7 @@
     require 'Pra.la.php';
     
     #Iniciando o objeto. Necessário para todos os exemplos abaixo.
-    $prala = new PraLa('http://inscrever-se.net/semanadelinguas');
+    $prala = new PraLa('http://www.google.com');
     
     #Exemplo Simples - Encurtando a Url
     //echo $prala->shorten();
@@ -22,7 +22,7 @@
     </prala>/**/
     
     #Exemplo com customização da URL gerada
-    //echo $prala->customize('semanadelinguas')->shorten();     //Retornará http://pra.la/iPad2011
+    //echo $prala->customize('google')->shorten();     //Retornará http://pra.la/google
     
     #Exemplo com Autenticação
     //echo $prala->auth('apelido', 'chave_secreta')->shorten();
