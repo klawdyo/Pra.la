@@ -216,7 +216,7 @@ class PraLa{
             $this->shortUrl = $results;
         }
         
-        //Finalizando com o retorno dos resultados
+        //Finalizando com o retorno dos resultados.
         return $results;        
     }
     
