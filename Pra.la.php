@@ -258,7 +258,7 @@ class PraLa{
                 $params = '?' . $params;
             }
         }
-        print_r($url.$params);echo "\n";
+        //print_r($url.$params);echo "\n";
         return file_get_contents($url . $params);        
     }
 }

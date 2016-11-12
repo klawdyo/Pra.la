@@ -28,4 +28,4 @@
     //echo $prala->auth('apelido', 'chave_secreta')->shorten();
     
     #Gerando uma imagem com um Qrcode a partir da url encurtada.
-    echo '<img src="' . $prala->qrcode() . '" />';
+    //echo '<img src="' . $prala->qrcode() . '" />';
